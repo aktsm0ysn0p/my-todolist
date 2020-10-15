@@ -1,6 +1,5 @@
 <?php
 
-require("./conf.php");
 require("./function.php");
 createToken();
 try {
