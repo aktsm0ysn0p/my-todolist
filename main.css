@@ -57,6 +57,7 @@ header {
   transition: .3s;
   box-shadow: 3px 3px 2px #666666;
   border: 2px solid #7ed6ac;
+  -webkit-appearance: none;
 }
 #set_btn:hover {
   box-shadow    : none;
@@ -119,6 +120,7 @@ header {
   transition: .3s;
   box-shadow: 3px 3px 2px #666666;
   border: 2px solid #7ed6ac;
+  -webkit-appearance: none;
 }
 .btn:hover {
   box-shadow    : none;
