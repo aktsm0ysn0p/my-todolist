@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My ToDo リスト</title>
+  <title>MyToDolist</title>
   <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
   <div class="s">
-    <p class="info">Completed!</p>
+    <p class="info">List to added!</p>
     <a href="index.php" class="btn re_a">Go back</a>
   </div>
 </body>

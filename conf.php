@@ -1,4 +1,9 @@
 <?php
+
+define('DSN', 'mysql:host=mysql;dbname=db;charset=utf8mb4');
+define('DB_USER', 'user');
+define('DB_PASS', 'user');
+
 function dbConnect()
 {
   $db = parse_url($_SERVER['CLEARDB_DATABASE_URL']);

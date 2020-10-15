@@ -4,8 +4,15 @@ require("./conf.php");
 require("./function.php");
 createToken();
 try {
-
-  dbConnect();
+  $dbh = new PDO(
+    DSN,
+    DB_USER,
+    DB_PASS,
+    [
+      PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+      PDO::ATTR_EMULATE_PREPARES => false,
+    ]
+  );
 
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -19,7 +26,7 @@ try {
       $in_pre->bindValue(':text', $text, PDO::PARAM_STR);
       $in_pre->execute();
 
-      header('Location: /result.php');
+      header('Location: http://localhost:8081/result.php');
       exit;
     } else if (!empty($_POST['d_btn'])) {
 
@@ -28,7 +35,7 @@ try {
       $in_pre->bindValue(':id', $d_id, PDO::PARAM_INT);
       $in_pre->execute();
 
-      header('Location: /result.php');
+      header('Location: http://localhost:8081/result.php');
       exit;
     } else if (!empty($_POST['e_btn'])) {
       validateToken();
@@ -42,7 +49,7 @@ try {
       $up_pre->bindValue(':id', $e_id, PDO::PARAM_INT);
       $editlist = $up_pre->execute();
 
-      header('Location: /result.php');
+      header('Location: http://localhost:8081/result.php');
       exit;
     }
   }
