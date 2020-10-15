@@ -11,7 +11,7 @@
 <body>
   <div class="s">
     <p class="info">List to added!</p>
-    <a href="index.php" class="btn re_a">Go back</a>
+    <a href="https://mytodolist-app-1.herokuapp.com/index.php" class="btn re_a">Go back</a>
   </div>
 </body>
 
